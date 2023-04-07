@@ -6,7 +6,10 @@ defmodule HighSchoolSweetheart do
   end
 
   def initial(name) do
-    # Please implement the initial/1 function
+    name
+    |>first_letter()
+    |>String.upcase()
+    |>Kernel.<>(".")
   end
 
   def initials(full_name) do
@@ -20,7 +23,7 @@ defmodule HighSchoolSweetheart do
     # **            *            **
     # **                         **
     # **     X. X.  +  X. X.     **
-    
+
     #  **                       **
     #    **                   **
     #      **               **
