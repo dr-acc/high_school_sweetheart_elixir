@@ -13,26 +13,30 @@ defmodule HighSchoolSweetheart do
   end
 
   def initials(full_name) do
-    # Please implement the initials/1 function
+    names = String.split(full_name)
+    first = List.first(names)
+    last = List.last(names)
+    "#{__MODULE__.initial(first)} #{__MODULE__.initial(last)}"
   end
 
   def pair(full_name1, full_name2) do
-    #      ******       ******
-    #    **      **   **      **
-    #  **         ** **         **
-    # **            *            **
-    # **                         **
-    # **     X. X.  +  X. X.     **
-
-    #  **                       **
-    #    **                   **
-    #      **               **
-    #        **           **
-    #          **       **
-    #            **   **
-    #              ***
-    #               *
-
-    # Please implement the pair/2 function
+    i1 = __MODULE__.initials(full_name1)
+    i2 = __MODULE__.initials(full_name2)
+    """
+         ******       ******
+       **      **   **      **
+     **         ** **         **
+    **            *            **
+    **                         **
+    **     #{i1}  +  #{i2}     **
+     **                       **
+       **                   **
+         **               **
+           **           **
+             **       **
+               **   **
+                 ***
+                  *
+    """
   end
 end
