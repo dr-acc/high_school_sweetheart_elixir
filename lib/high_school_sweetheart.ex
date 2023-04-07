@@ -1,6 +1,8 @@
 defmodule HighSchoolSweetheart do
   def first_letter(name) do
-    # Please implement the first_letter/1 function
+    name
+    |>String.trim()
+    |>String.first()
   end
 
   def initial(name) do
@@ -18,6 +20,7 @@ defmodule HighSchoolSweetheart do
     # **            *            **
     # **                         **
     # **     X. X.  +  X. X.     **
+    
     #  **                       **
     #    **                   **
     #      **               **
